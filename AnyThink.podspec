@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThink"
-  spec.version      = "5.3.1"
+  spec.version      = "5.3.2"
   spec.summary      = "A short description of AnyThink."
   spec.description  = <<-DESC
 			this is my first test framework
@@ -16,20 +16,20 @@ Pod::Spec.new do |spec|
   spec.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   spec.libraries = 'c++', 'z', 'sqlite3', 'xml2'
   
-  #spec.default_subspecs = 'AnyThinkSDK'
+  spec.default_subspecs = 'AnyThinkSDK'
 
-  #spec.subspec 'AnyThinkSDK' do |ss|
-  #   ss.ios.deployment_target = '8.0'
-  #   ss.vendored_frameworks = 'AnyThink/AnyThinkSDK/*.framework'
-  #   ss.resource = 'AnyThink/AnyThinkSDK/AnyThinkSDK.bundle'
-  #end
+  spec.subspec 'AnyThinkSDK' do |ss|
+     ss.ios.deployment_target = '8.0'
+     ss.vendored_frameworks = 'AnyThink/AnyThinkSDK/*.framework'
+     ss.resource = 'AnyThink/AnyThinkSDK/AnyThinkSDK.bundle'
+  end
 
-  #spec.subspec 'AnyThinkTTAdapter' do |ss|
-  #   ss.ios.deployment_target = '8.0'
-  #   ss.vendored_frameworks = 'AnyThink/AnyThinkTTAdapter/*.framework'
-  #   ss.dependency 'AnyThink/AnyThinkSDK'
-  #end
+  spec.subspec 'AnyThinkTTAdapter' do |ss|
+     ss.ios.deployment_target = '8.0'
+     ss.vendored_frameworks = 'AnyThink/AnyThinkTTAdapter/*.framework'
+     ss.dependency 'AnyThink/AnyThinkSDK'
+  end
   
   
-  spec.vendored_frameworks = 'AnyThink/AnyThinkSDK.framework'
+
 end
