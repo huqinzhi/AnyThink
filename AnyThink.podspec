@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThink"
-  spec.version      = "5.3.0"
+  spec.version      = "5.3.1"
   spec.summary      = "A short description of AnyThink."
   spec.description  = <<-DESC
 			this is my first test framework
